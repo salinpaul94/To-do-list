@@ -15,6 +15,7 @@ function add_task() {
     li.appendChild(span);
   }
   input_box.value = "";
+  save_data();
 }
 
 list_container.addEventListener("click", function(e) {
