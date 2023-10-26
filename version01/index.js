@@ -16,3 +16,11 @@ function add_task() {
   }
   input_box.value = "";
 }
+
+list_container.addEventListener("click", function(e) {
+  if(e.target.tagName === "LI") {
+    e.target.classList.toggle("checked");
+  } else if(e.target.tagName === "SPAN") {
+    e.target.parentElement.remove();
+  }
+}, false);
