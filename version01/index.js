@@ -24,8 +24,15 @@ list_container.addEventListener("click", function(e) {
   } else if(e.target.tagName === "SPAN") {
     e.target.parentElement.remove();
   }
+  save_data();
 }, false);
 
 function save_data() {
   localStorage.setItem("data", list_container.innerHTML);
 }
+
+function show_task() {
+  list_container.innerHTML = localStorage.getItem("data");
+}
+
+window.addEventListener("DOMContentLoaded", show_task());
