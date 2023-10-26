@@ -10,4 +10,5 @@ function add_task() {
     li.innerHTML = input_box.value;
     list_container.appendChild(li);
   }
+  input_box.value = "";
 }
