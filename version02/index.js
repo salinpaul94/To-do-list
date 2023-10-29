@@ -1,5 +1,14 @@
 const input_box = document.getElementById("input-box");
-const list_container = document.getElementById("list-container")
+const list_container = document.getElementById("list-container");
+let localStorage;
+
+function selectLocalStorage(storage){
+  if(storage === "office") {
+    localStorage = "office";
+  } else {
+    localStorage = "personal";
+  }
+}
 
 function add_task() {
   if(input_box.value === "") {
