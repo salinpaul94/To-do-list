@@ -39,6 +39,12 @@ list_container.addEventListener("click", function (e) {
   save_data();
 }, false);
 
+input_box.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    add_task();
+  }
+});
+
 function save_data() {
   localStorage.setItem(systemStorage, list_container.innerHTML);
 }
